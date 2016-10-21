@@ -7,7 +7,7 @@
 //
 
 enum MessageType {
-    case Message
-    case Log
-    case TypeAction
+    case message
+    case log
+    case typeAction
 }

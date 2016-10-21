@@ -7,7 +7,7 @@
 //
 
 import Foundation
-import Socket_IO_Client_Swift
+import SocketIO
 
 public class SocketIOClientSingleton {
     
@@ -16,7 +16,7 @@ public class SocketIOClientSingleton {
     var socket:SocketIOClient!
     
     private init() {
-        self.socket = SocketIOClient(socketURL: Constants.CHAT_SERVER_URL, options: [.Log(false), .ForcePolling(true)])
+        self.socket = SocketIOClient(socketURL: URL(string: Constants.CHAT_SERVER_URL)!, config: [.log(false)])
     }
     
 }
